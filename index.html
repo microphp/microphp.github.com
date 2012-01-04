@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>MicroPHP</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="foundation/stylesheets/foundation.css">
+	<link rel="stylesheet" href="foundation/stylesheets/app.css">
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="foundation/stylesheets/ie.css">
+	<![endif]-->
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/zepto/0.7/zepto.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$.getJSON(
+				'https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.js?limit=5&jsonp_callback=?',
+				function(data) {
+					var list_tpl = "<% _.each(records, function(record) { %> \
+						<li> \
+							<a href='https://gimmebar.com/view/<%=record.id%>'><%=record.title%></a> \
+							<div class='description'><%=record.description%></div> \
+						</li> \
+						<% }); %>";
+					var list_html = _.template(list_tpl, data);
+					$('#gb-assets').html(list_html);
+				}
+			)
+		})
+	</script>
+
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="row"> <!-- header -->
+			<div class="twelve columns">
+				<h2>The MicroPHP Manifesto</h2>
+				<p>As of Wednesday; January 4, 2012 at 10:10 AM EST</p>
+				<hr>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="eight columns"> <!-- main content -->
+				<h4>I am a PHP developer</h4>
+
+				<ul>
+				<li>I am not a Zend Framework or Symfony or CakePHP developer</li>
+				<li>I think PHP is complicated enough</li>
+				</ul>
+
+				<h4>I like building small things</h4>
+				<ul>
+				<li>I like building small things with simple purposes</li>
+				<li>I like to make things that solve problems</li>
+				<li>I like building small things that work together to solve larger problems</li>
+				</ul>
+
+				<h4>I want less code, not more</h4>
+				<ul>
+				<li>I want to write less code, not more</li>
+				<li>I want to manage less code, not more</li>
+				<li>I want to support less code, not more</li>
+				<li>I need to justify every piece of code I add to a project</li>
+				</ul>
+
+				<h4>I like simple, readable code</h4>
+
+				<ul>
+				<li>I want to write code that is easily understood</li>
+				<li>I want code that is easily verifiable</li>
+				</ul>
+			</div>
+
+			<div class="four columns"> <!-- sidebar -->
+				<h4>Get Your Code On</h4>
+
+				<ul id="gb-assets"></ul>
+
+				<ul>
+					<li><a href="https://gimmebar.com/loves/funkatron/collection/micro-php">More</a></li>
+					<li><a href="https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.json">JSON</a></li>
+					<li><a href="https://gimmebar.com/public/feed/user/funkatron/collection/micro-php">RSS</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div class="row"> <!-- footer -->
+			<div class="twelve columns footer-content">
+				<hr>
+				a <a href="http://funkatron.com">funkatron</a> jam-city
+			</div>
+		</div>
+
+
+	</div>
+	<!-- container -->
+
+
+
+
+	<!-- Included JS Files -->
+	<script src="foundation/javascripts/foundation.js"></script>
+	<script src="foundation/javascripts/app.js"></script>
+
+</body>
+</html>
