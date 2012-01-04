@@ -39,7 +39,11 @@
 				function(data) {
 					var list_tpl = "<% _.each(records, function(record) { %> \
 						<li> \
-							<a href='https://gimmebar.com/view/<%=record.id%>'><%=record.title%></a> \
+							<% if(record.asset_type === 'page') { %> \
+								<a href='<%=record.content.original%>'><%=record.title%></a> \
+							<% } else { %> \
+								<a href='https://gimmebar.com/view/<%=record.id%>'><%=record.title%></a> \
+							<% } %> \
 							<div class='description'><%=record.description%></div> \
 						</li> \
 						<% }); %>";
