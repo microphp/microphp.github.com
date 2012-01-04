@@ -35,7 +35,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$.getJSON(
-				'https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.js?limit=5&jsonp_callback=?',
+				'https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.js?limit=7&jsonp_callback=?',
 				function(data) {
 					var list_tpl = "<% _.each(records, function(record) { %> \
 						<li> \
@@ -107,8 +107,8 @@
 
 				<ul>
 					<li><a href="https://gimmebar.com/loves/funkatron/collection/micro-php">More</a></li>
-					<li><a href="https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.json">JSON</a></li>
-					<li><a href="https://gimmebar.com/public/feed/user/funkatron/collection/micro-php">RSS</a></li>
+					<li><a href="https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.json?limit=25">JSON</a></li>
+					<li><a href="https://gimmebar.com/public/feed/user/funkatron/collection/micro-php?limit=25">RSS</a></li>
 				</ul>
 
 			</div>
