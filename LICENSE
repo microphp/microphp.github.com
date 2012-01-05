@@ -1,10 +1,4 @@
-Resty.php contains code from the Amazon S3 PHP class, which uses BSD license.
-See source code for details.
-
-
-Resty.php's license is as follows:
-
-Copyright 2011 Ed Finkler and Sean Coates
+Copyright 2011 Ed Finkler
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
