@@ -1,7 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
 body {
 	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	margin-top: 1em;
 	color: #666;
+}
+
+a {
+	color: #660000;
 }
 
 hr {
@@ -9,15 +15,17 @@ hr {
 }
 
 h1, h2, h3, h4 {
+	font-family: "PT Sans Narrow", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	font-weight: bold;
 }
 
-h2 {
-	color:  #FFF;
-	margin-bottom: .5em;
-	padding: .1em;
-	background-color: #333;
+h1 {
+	/*color:  #FFF;*/
+	margin-bottom: 0em;
+	/*padding: .1em;*/
+	/*background-color: #333;*/
 	display: inline-block;
+	font-size: 5em;
 }
 
 div.main-content {
@@ -33,30 +41,25 @@ div.main-content ul li {
 	font-size: 1.1em;
 }
 
-div.main-content h4 {
+div.main-content h3 {
 	color:  #000000;
 	margin-bottom: .5em;
-/*	font-style: italic;*/
-	font-weight: normal;
+	/*font-weight: normal;*/
 }
 
-div.sidebar-content h4 {
+div.sidebar-content h3 {
 	color:  #FFF;
-	margin-bottom: .5em;
-	padding: .1em;
+	margin-bottom: .2em;
+	padding: .5em;
 	background-color: #333;
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 div.sidebar-content ul li {
-	color:  #FFF;
-	margin-bottom: .5em;
+	/*color:  #FFF;*/
+	margin-bottom: .2em;
 	padding: .5em;
-	background-color: #333;
+	/*background-color: #333;*/
 	display: inline-block;
 	clear:both;
-}
-
-div.sidebar-content ul li a {
-	color: aqua;
 }
