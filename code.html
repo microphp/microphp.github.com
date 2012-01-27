@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width">
+
+	<title>The MicroPHP Manifesto: Code</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="foundation/stylesheets/foundation.css">
+	<link rel="stylesheet" href="foundation/stylesheets/app.css">
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="foundation/stylesheets/ie.css">
+	<![endif]-->
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/zepto/0.7/zepto.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.5.3/backbone-min.js"></script>
+
+	<script type="text/javascript" src="js/list.min.js"></script>
+	<script type="text/javascript" src="js/code.js"></script>
+
+</head>
+<body id="code">
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="row"> <!-- header -->
+			<div class="eight columns">
+				<h1><a href="/">The MicroPHP Manifesto</a>: Code</h1>
+				<!-- <p>As of Wednesday; January 4, 2012 at 10:10 AM EST</p> -->
+			</div>
+			<div class="four columns" style="text-align:right">
+
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style" style="display:inline-block; padding-top: 2.5em">
+				<a class="addthis_button_twitter"></a>
+				<a class="addthis_button_facebook"></a>
+				<a class="addthis_button_email"></a>
+				<a class="addthis_button_print"></a>
+				<a class="addthis_button_google_plusone" g:plusone:annotation="none"></a>
+			</div>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9a50eb30ab82ff"></script>
+			<!-- AddThis Button END -->
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="twelve columns"><hr></div>
+		</div>
+
+		<div class="row">
+			<div class="twelve columns main-content" id="code-list"> <!-- main content -->
+				<form onsubmit="return false;"><input class="search" placeholder="search"></form>
+				<ul id="gb-assets" class="block-grid two-up list"></ul>
+			</div>
+		</div>
+
+		<div class="row"> <!-- footer -->
+			<div class="twelve columns footer-content">
+				<hr>
+				a <a href="http://funkatron.com">funkatron</a> jam-city &mdash; <a href="https://github.com/microphp/microphp.github.com">site source</a>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- container -->
+
+
+
+
+	<!-- Included JS Files -->
+	<script src="foundation/javascripts/foundation.js"></script>
+	<script src="foundation/javascripts/app.js"></script>
+
+	<script type="text/javascript">
+	var clicky_site_ids = clicky_site_ids || [];
+	clicky_site_ids.push(66522455);
+	(function() {
+	  var s = document.createElement('script');
+	  s.type = 'text/javascript';
+	  s.async = true;
+	  s.src = '//static.getclicky.com/js';
+	  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+	})();
+	</script>
+	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66522455ns.gif" /></p></noscript>
+
+</body>
+</html>

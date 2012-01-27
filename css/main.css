@@ -63,3 +63,15 @@ div.sidebar-content ul li {
 	display: inline-block;
 	clear:both;
 }
+
+
+#code h1 {
+	font-size:4em;
+}
+#gb-assets li {
+	min-height: 5em;
+}
+
+#gb-assets .tags {
+	display:none;
+}
