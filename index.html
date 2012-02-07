@@ -38,7 +38,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$.getJSON(
-				'https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.js?limit=7&jsonp_callback=?',
+				'https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.js?limit=5&jsonp_callback=?',
 				function(data) {
 					var list_tpl = "<% _.each(records, function(record) { %> \
 						<li> \
@@ -51,7 +51,7 @@
 						</li> \
 						<% }); %>";
 					var list_html = _.template(list_tpl, data);
-					$('#gb-assets').html(list_html);
+					$('#gb-sidebar-assets').html(list_html);
 				}
 			)
 		})
@@ -119,18 +119,22 @@
 				<li>I want to write code that is easily understood</li>
 				<li>I want code that is easily verifiable</li>
 				</ul>
-
-				<p><em>&raquo; <a href="http://funkatron.com/posts/the-microphp-manifesto.html">Read the original blog post</a>
-					&mdash; <a href="http://zdrojak.root.cz/clanky/manifest-miniaturniho-php/">Czech</a></em></p>
 			</div>
 
 			<div class="four columns sidebar-content"> <!-- sidebar -->
+				<h3>Learn more</h3>
+				<ul>
+					<li><a href="http://funkatron.com/posts/the-microphp-manifesto.html">Read the original blog post</a>
+					&mdash; <a href="http://zdrojak.root.cz/clanky/manifest-miniaturniho-php/">in Czech</a></li>
+					<li><a href="http://funkatron.com/posts/the-microphp-follow-up-faq.html">A FAQ of sorts</a></li>
+					<li><a href="http://devhell.info/post/2012-01-07/beatings-will-continue-until-test-coverage-improves/">Discussion on the /dev/hell podcast</a></li>
+
 				<h3>Get Your Code On</h3>
 
-				<ul id="gb-assets"></ul>
+				<ul id="gb-sidebar-assets"></ul>
 
 				<ul>
-					<li><a href="/code.html">More code &raquo;</a></li>
+					<li><strong><a href="/code.html">More code &raquo;</a></strong></li>
 					<li><a href="https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.json?limit=25">JSON</a></li>
 					<li><a href="https://gimmebar.com/public/feed/user/funkatron/collection/micro-php?limit=25">RSS</a></li>
 				</ul>
