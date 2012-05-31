@@ -64,7 +64,7 @@ MicroPHP.CodeView = Backbone.View.extend({
 		if (!skip) { skip = 0; }
 
 		$.getJSON(
-			'https://gimmebar.com/api/v0/public/assets/funkatron/micro-php?limit=' + limit + '&skip=' + skip + '&jsonp_callback=?',
+			'https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.json?limit=' + limit + '&skip=' + skip + '&jsonp_callback=?',
 			_.bind(function(data) {
 				var entities = [];
 				_.each(data.records, function(record) {
