@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
+// Your custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// SVG webicons
+@import "../stylesheets/fc-webicons.css";
+
+// symbol fonts icons
+@import "../stylesheets/general_foundicons.css";
+
+[class*="foundicon-"] {
+	vertical-align: text-bottom;
+}
+
+body {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin-top: 1em;
+}
+
+hr {
+	border-top: 2px solid lighten($black, 30);
+}
+
+h1, h2, h3, h4 {
+	font-family: "PT Sans Narrow", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+}
+
+h1 {
+	margin-bottom: 0em;
+	display: inline-block;
+	font-size: 5em;
+	letter-spacing: -3px;
+	white-space: nowrap;
+}
+
+div.main-content {
+	ul {
+		margin-left: 1.5em;
+	}
+
+	ul li {
+		margin: .5em;
+		font-size: 1.1em;
+	}
+
+	h3 {
+		color:  $black;
+		margin-bottom: .5em;
+	}
+}
+
+div.sidebar-content {
+	h3 {
+		color:  $white;
+		margin-bottom: .2em;
+		padding: .5em;
+		background-color: lighten($black, 30);
+	}
+	ul li {
+		margin-bottom: .2em;
+		padding: .5em;
+		display: inline-block;
+		clear:both;
+	}
+}
+
+
+#code h1 {
+	font-size:4em;
+}
+#gb-assets {
+	li {
+		min-height: 5em;
+	}
+	.tags {
+		display:none;
+	}
+}

@@ -1,0 +1,61 @@
+	<div class="row">
+		<div class="eight columns main-content"> <!-- main content -->
+			<h3>I am a PHP developer</h3>
+
+			<ul>
+			<li>I am not a Zend Framework or Symfony or CakePHP developer</li>
+			<li>I think PHP is complicated enough</li>
+			</ul>
+
+			<h3>I like building small things</h3>
+			<ul>
+			<li>I like building small things with simple purposes</li>
+			<li>I like to make things that solve problems</li>
+			<li>I like building small things that work together to solve larger problems</li>
+			</ul>
+
+			<h3>I want less code, not more</h3>
+			<ul>
+			<li>I want to write less code, not more</li>
+			<li>I want to manage less code, not more</li>
+			<li>I want to support less code, not more</li>
+			<li>I need to justify every piece of code I add to a project</li>
+			</ul>
+
+			<h3>I like simple, readable code</h3>
+
+			<ul>
+			<li>I want to write code that is easily understood</li>
+			<li>I want code that is easily verifiable</li>
+			</ul>
+		</div>
+
+		<div class="four columns sidebar-content"> <!-- sidebar -->
+			<h3>Learn more</h3>
+			<ul>
+				<li><a href="http://funkatron.com/posts/the-microphp-manifesto.html">Read the original blog post</a>
+				&mdash; <a href="http://zdrojak.root.cz/clanky/manifest-miniaturniho-php/">Czech</a>
+				&mdash; <a href="http://habrahabr.ru/blogs/php/139115/">Russian</a></li>
+				<li><a href="http://funkatron.com/posts/the-microphp-follow-up-faq.html">A FAQ of sorts</a></li>
+				<li><a href="http://devhell.info/post/2012-01-07/beatings-will-continue-until-test-coverage-improves/">Discussion on the /dev/hell podcast</a></li>
+
+			<h3>Get Your Code On</h3>
+
+			<ul id="gb-sidebar-assets">
+				<li ng-repeat="record in model.records | limitTo:3">
+					<div ng-switch="record.asset_type">
+						<a ng-switch-when='page' href="{{record.content.original}}">{{record.title}}</a>
+						<a ng-switch-default href="https://gimmebar.com/view/{{record.id}}">{{record.title}}</a>
+					</div>
+					<div class="description">{{record.description}}</div>
+				</li>
+			</ul>
+
+			<ul>
+				<li><strong><a ng-href="#!/code">More code &raquo;</a></strong></li>
+				<li><a href="https://gimmebar.com/api/v1/public/assets/funkatron/micro-php.json?limit=50">JSON</a></li>
+				<li><a href="https://gimmebar.com/public/feed/user/funkatron/collection/micro-php?limit=50">RSS</a></li>
+			</ul>
+
+		</div>
+	</div>

@@ -1,0 +1,15 @@
+	<div class="row">
+		<div class="twelve columns">
+			<h2><span class="foundicon-star"></span> There are {{model.records.length}} records</h2>
+
+			<form>
+				<input type="text" placeholder="search" ng-model="query">
+			</form>
+			<ul class="block-grid two-up">
+				<li ng-repeat="record in model.records | filter:query">
+					<h3>{{record.title}}</h3>
+					<p>{{record.description}}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
