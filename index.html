@@ -1,176 +1,59 @@
 <!DOCTYPE html>
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"  ng-app="MicroPHPApp" ng-controller="MainController"> <!--<![endif]-->
+
 <head>
 	<meta charset="utf-8" />
 
 	<!-- Set the viewport width to device width for mobile -->
-	<meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>The MicroPHP Manifesto</title>
+	<title ng-bind-template="The MicroPHP Manifesto: {{title}}">The MicroPHP Manifesto</title>
 
 	<!-- Included CSS Files -->
-	<link rel="stylesheet" href="foundation/stylesheets/foundation.css">
-	<link rel="stylesheet" href="foundation/stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
 
-	<script src="foundation/javascripts/foundation.js"></script>
-	<script src="foundation/javascripts/app.js"></script>
-
-
-	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="foundation/stylesheets/ie.css">
-	<![endif]-->
-
-
-	<!-- IE Fix for HTML5 Tags -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<link rel="stylesheet" href="css/main.css">
-
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$.getJSON(
-				'https://gimmebar.com/api/v0/public/assets/funkatron/micro-php.json?limit=5&jsonp_callback=?',
-				function(data) {
-					var list_tpl = "<% _.each(records, function(record) { %> \
-						<li> \
-							<% if(record.asset_type === 'page') { %> \
-								<a href='<%=record.content.original%>'><%=record.title%></a> \
-							<% } else { %> \
-								<a href='https://gimmebar.com/view/<%=record.id%>'><%=record.title%></a> \
-							<% } %> \
-							<div class='description'><%=record.description%></div> \
-						</li> \
-						<% }); %>";
-					var list_html = _.template(list_tpl, data);
-					$('#gb-sidebar-assets').html(list_html);
-				}
-			)
-		})
-	</script>
-
+	<script src="javascripts/foundation/modernizr.foundation.js"></script>
 </head>
 <body>
 
-	<!-- container -->
-	<div class="container">
-
-		<div class="row"> <!-- header -->
-			<div class="eight columns">
-				<h1>The MicroPHP Manifesto</h1>
-				<!-- <p>As of Wednesday; January 4, 2012 at 10:10 AM EST</p> -->
-			</div>
-			<div class="four columns" style="text-align:right">
-
-<!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style addthis_32x32_style" style="display:inline-block; padding-top: 2.5em">
-  <a class="addthis_button_twitter"></a>
-  <a class="addthis_button_facebook"></a>
-  <a class="addthis_button_email"></a>
-  <a class="addthis_button_print"></a>
-  <a class="addthis_button_google_plusone" g:plusone:annotation="none"></a>
-
-</div>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9a50eb30ab82ff"></script>
-<!-- AddThis Button END -->
-			</div>
-
+	<div class="row">
+		<div class="nine columns">
+			<h1><a ng-href="/" ng-bind-template="The MicroPHP Manifesto {{title}}">The MicroPHP Manifesto</a></h1>
 		</div>
-
-		<div class="row">
-			<div class="twelve columns"><hr></div>
-		</div>
-
-		<div class="row">
-			<div class="eight columns main-content"> <!-- main content -->
-				<h3>I am a PHP developer</h3>
-
-				<ul>
-				<li>I am not a Zend Framework or Symfony or CakePHP developer</li>
-				<li>I think PHP is complicated enough</li>
-				</ul>
-
-				<h3>I like building small things</h3>
-				<ul>
-				<li>I like building small things with simple purposes</li>
-				<li>I like to make things that solve problems</li>
-				<li>I like building small things that work together to solve larger problems</li>
-				</ul>
-
-				<h3>I want less code, not more</h3>
-				<ul>
-				<li>I want to write less code, not more</li>
-				<li>I want to manage less code, not more</li>
-				<li>I want to support less code, not more</li>
-				<li>I need to justify every piece of code I add to a project</li>
-				</ul>
-
-				<h3>I like simple, readable code</h3>
-
-				<ul>
-				<li>I want to write code that is easily understood</li>
-				<li>I want code that is easily verifiable</li>
-				</ul>
+		<div class="three columns addthis-box">
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style" style="display:inline-block; padding-top: 2.5em">
+				  <a class="addthis_button_twitter"></a>
+				  <a class="addthis_button_facebook"></a>
+				  <a class="addthis_button_email"></a>
+				  <a class="addthis_button_print"></a>
+				  <a class="addthis_button_google_plusone" g:plusone:annotation="none"></a>
 			</div>
-
-			<div class="four columns sidebar-content"> <!-- sidebar -->
-				<h3>Learn more</h3>
-				<ul>
-					<li><a href="http://funkatron.com/posts/the-microphp-manifesto.html">Read the original blog post</a>
-					&mdash; <a href="http://zdrojak.root.cz/clanky/manifest-miniaturniho-php/">Czech</a>
-					&mdash; <a href="http://habrahabr.ru/blogs/php/139115/">Russian</a></li>
-					<li><a href="http://funkatron.com/posts/the-microphp-follow-up-faq.html">A FAQ of sorts</a></li>
-					<li><a href="http://devhell.info/post/2012-01-07/beatings-will-continue-until-test-coverage-improves/">Discussion on the /dev/hell podcast</a></li>
-
-				<h3>Get Your Code On</h3>
-
-				<ul id="gb-sidebar-assets"></ul>
-
-				<ul>
-					<li><strong><a href="/code.html">More code &raquo;</a></strong></li>
-					<li><a href="https://gimmebar.com/api/v1/public/assets/funkatron/micro-php.json?limit=25">JSON</a></li>
-					<li><a href="https://gimmebar.com/public/feed/user/funkatron/collection/micro-php?limit=25">RSS</a></li>
-				</ul>
-
-			</div>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9a50eb30ab82ff"></script>
 		</div>
+	</h1>
 
-		<div class="row"> <!-- footer -->
-			<div class="twelve columns footer-content">
-				<hr>
-				a <a href="http://funkatron.com">funkatron</a> jam-city &mdash; <a href="https://github.com/microphp/microphp.github.com">site source</a>
-			</div>
-		</div>
-
-
+	<div class="row">
+		<div class="twelve columns"><hr></div>
 	</div>
-	<!-- container -->
+
+	<div ng-view>
+	</div>
+
+	<div class="row"> <!-- footer -->
+		<div class="twelve columns footer-content">
+			<hr>
+			a <a href="http://funkatron.com">funkatron</a> jam-city &mdash; <a href="https://github.com/microphp/microphp.github.com">site source</a>
+		</div>
+	</div>
 
 
-
-
-	<!-- Included JS Files -->
-
-	<script type="text/javascript">
-	var clicky_site_ids = clicky_site_ids || [];
-	clicky_site_ids.push(66522455);
-	(function() {
-	  var s = document.createElement('script');
-	  s.type = 'text/javascript';
-	  s.async = true;
-	  s.src = '//static.getclicky.com/js';
-	  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-	})();
-	</script>
-	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66522455ns.gif" /></p></noscript>
+	<script src="javascripts/requirements-min.js"></script>
+	<!-- Application Javascript, safe to override -->
+	<script src="javascripts/app.js"></script>
 
 </body>
 </html>
