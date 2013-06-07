@@ -7,7 +7,7 @@
 			</form>
 			<ul class="block-grid two-up">
 				<li ng-repeat="record in model.records | filter:query">
-					<h3>{{record.title}}</h3>
+					<h3><a href="{{record.source}}">{{record.title}}</a></h3>
 					<p>{{record.description}}</p>
 				</li>
 			</ul>
