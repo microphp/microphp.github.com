@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"  ng-app="MicroPHPApp" ng-controller="MainController"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title ng-bind-template="The MicroPHP Manifesto: {{title}}">The MicroPHP Manifesto</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<script src="javascripts/foundation/modernizr.foundation.js"></script>
+</head>
+<body>
+
+	<div class="row">
+		<div class="nine columns">
+			<h1><a ng-href="/" ng-bind-template="The MicroPHP Manifesto {{title}}">The MicroPHP Manifesto</a></h1>
+		</div>
+		<div class="three columns addthis-box">
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style" style="display:inline-block; padding-top: 2.5em">
+				  <a class="addthis_button_twitter"></a>
+				  <a class="addthis_button_facebook"></a>
+				  <a class="addthis_button_email"></a>
+				  <a class="addthis_button_print"></a>
+				  <a class="addthis_button_google_plusone" g:plusone:annotation="none"></a>
+			</div>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9a50eb30ab82ff"></script>
+		</div>
+	</h1>
+
+	<div class="row">
+		<div class="twelve columns"><hr></div>
+	</div>
+
+	<div ng-view>
+	</div>
+
+	<div class="row"> <!-- footer -->
+		<div class="twelve columns footer-content">
+			<hr>
+			a <a href="http://funkatron.com">funkatron</a> jam-city &mdash; <a href="https://github.com/microphp/microphp.github.com">site source</a>
+		</div>
+	</div>
+
+
+	<script src="javascripts/requirements-min.js"></script>
+	<!-- Application Javascript, safe to override -->
+	<script src="javascripts/app.js"></script>
+</body>
+</html>
