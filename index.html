@@ -20,39 +20,28 @@
 <body>
 
 	<div class="row">
-		<div class="nine columns">
+		<div class="twelve columns">
 			<h1><a ng-href="/" ng-bind-template="The MicroPHP Manifesto {{title}}">The MicroPHP Manifesto</a></h1>
+			<hr>
+			<p>Not only is this site pretty broken, but it's out of date.</p>
+
+			<p>The manifesto was written in a time when it was hard to find high-quality components that weren't tied to heavy,
+			"batteries-included" frameworks.</p>
+
+			<p>This has changed. <a href="https://getcomposer.org">Composer</a> and <a href="https://packagist.org">packagist.org</a> have done their job. Most heavy frameworks are made up of components now, and it's reasonable to pick and choose your tools at will.</p>
+
+			<p>PHP is in a much better time. Enjoy it. Use the tools you see fit.</p>
+
+			<p><a href="./index-old.html">Old, busted homepage</a></p>
 		</div>
-		<div class="three columns addthis-box">
-			<!-- AddThis Button BEGIN -->
-			<div class="addthis_toolbox addthis_default_style addthis_32x32_style" style="display:inline-block; padding-top: 2.5em">
-				  <a class="addthis_button_twitter"></a>
-				  <a class="addthis_button_facebook"></a>
-				  <a class="addthis_button_email"></a>
-				  <a class="addthis_button_print"></a>
-				  <a class="addthis_button_google_plusone" g:plusone:annotation="none"></a>
-			</div>
-			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9a50eb30ab82ff"></script>
-		</div>
-	</h1>
+	</div>
 
 	<div class="row">
-		<div class="twelve columns"><hr></div>
-	</div>
-
-	<div ng-view>
-	</div>
-
-	<div class="row"> <!-- footer -->
 		<div class="twelve columns footer-content">
 			<hr>
 			a <a href="http://funkatron.com">funkatron</a> jam-city &mdash; <a href="https://github.com/microphp/microphp.github.com">site source</a>
 		</div>
 	</div>
-
-
-	<script src="javascripts/requirements-min.js"></script>
 	<!-- Application Javascript, safe to override -->
-	<script src="javascripts/app.js"></script>
 </body>
 </html>
